@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juneau Vacation Home: Stunning View + Beach Access</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            background: white;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 20px;
+            gap: 24px;
+        }
+
+        .nav-location {
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .sign-in {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #0053D6;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Property Navigation */
+        .property-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .back-link {
+            color: #0053D6;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 8px;
+            height: 400px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-main {
+            grid-row: span 2;
+        }
+
+        .gallery-side {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Tabs */
+        .tabs {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 24px;
+        }
+
+        .tab-list {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .tab-link {
+            color: #666;
+            text-decoration: none;
+            padding: 12px 0;
+            display: inline-block;
+        }
+
+        .tab-link.active {
+            color: #333;
+            border-bottom: 2px solid #333;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+        }
+
+        /* Property Details */
+        .property-type {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .property-title {
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .rating-badge {
+            background: #1cb557;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .review-link {
+            color: #0053D6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Property Features */
+        .features {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Amenities */
+        .amenities {
+            margin-bottom: 24px;
+        }
+
+        .amenities-title {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .amenity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 24px;
+        }
+
+        .map-container {
+            background: #f5f5f5;
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .location-list {
+            list-style: none;
+        }
+
+        .location-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 24px;
+            position: sticky;
+            top: 24px;
+        }
+
+        .member-banner {
+            background: #1a2b4b;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .price-display {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .per-night {
+            font-size: 16px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .date-picker {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .date-input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .travelers-select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .total-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .book-btn {
+            width: 100%;
+            padding: 14px;
+            background: #0053D6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .no-charge {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .contact-host {
+            color: #0053D6;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .property-id {
+            text-align: right;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .share-icon{
+            width:18px;
+        }
+
+        .save-icon{
+            width:18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-location">
+                <img src="/api/placeholder/20/20" alt="Globe icon">
+                United States
+            </a>
+            <a href="#" class="nav-link">Trip Boards</a>
+            <a href="#" class="nav-link">List your property</a>
+            <a href="#" class="nav-link">Help</a>
+            <a href="#" class="nav-link">My trips</a>
+            <a href="#" class="sign-in">Sign in</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Property Navigation -->
+        <div class="property-nav">
+            <a href="#" class="back-link">← See all properties</a>
+            <div class="action-btns">
+                <button class="btn"><img class="share-icon" src="./assets/icons/send.png">Share</button>
+                <button class="btn"><img class="save-icon" src="./assets/icons/heart.png">Save</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <div class="gallery-main">
+                <img src="./assets/images/house1.jpg" alt="Lake view">
+            </div>
+            <div class="gallery-side">
+                <img src="./assets/images/house2.jpg" alt="Property">
+                <img src="./assets/images/house3.jpg" alt="Interior">
+                <img src="./assets/images/house4.jpg" alt="Interior">
+                <img src="./assets/images/house5.jpg" alt="Interior">
+                <img src="./assets/images/house6.jpg" alt="Interior">
+                <img src="./assets/images/house7.jpg" alt="Interior">
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <ul class="tab-list">
+                <li><a href="#" class="tab-link active">Overview</a></li>
+                <li><a href="#" class="tab-link">Amenities</a></li>
+                <li><a href="#" class="tab-link">Policies</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div class="property-details">
+                <div class="property-type">Entire home</div>
+                <h1 class="property-title">Juneau Vacation Home: Stunning View + Beach Access</h1>
+                
+                <div class="rating">
+                    <span class="rating-badge">9.8 Exceptional</span>
+                    <a href="#" class="review-link">See all 24 reviews →</a>
+                </div>
+
+                <div class="features">
+                    <div class="feature">
+                        <img src="/api/placeholder/20/20" alt="Bedroom icon">
+                        <span>2 bedrooms</span>
+                    </div>
+                    <div class="feature">
+                        <img src="/api/placeholder/20/20" alt="Bathroom icon">
+                        <span>1 bathroom</span>
+                    </div>
+                    <div class="feature">
+                        <img src="/api/placeholder/20/20" alt="Guest icon">
+                        <span>Sleeps 4</span>
+                    </div>
+                    <div class="feature">
+                        <img src="/api/placeholder/20/20" alt="Size icon">
+                        <span>1155 sq ft</span>
+                    </div>
+                </div>
+
+                <div class="amenities">
+                    <h2 class="amenities-title">Popular amenities</h2>
+                    <div class="amenities-grid">
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="BBQ icon">
+                            <span>Barbecue grill</span>
+                        </div>
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="Washer icon">
+                            <span>Washer</span>
+                        </div>
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="Outdoor icon">
+                            <span>Outdoor Space</span>
+                        </div>
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="Parking icon">
+                            <span>Parking available</span>
+                        </div>
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="Kitchen icon">
+                            <span>Kitchen</span>
+                        </div>
+                        <div class="amenity">
+                            <img src="/api/placeholder/20/20" alt="Dryer icon">
+                            <span>Dryer</span>
+                        </div>
+                    </div>
+                    <a href="#" class="review-link">See all property amenities →</a>
+                </div>
+
+                <div class="map-section">
+                    <h2 class="amenities-title">Explore the area</h2>
+                    <div class="map-container"></div>
+                    <div class="location-list">
+                        <div class="location-item">
+                            <span>Auke Bay</span>
+                            <span>6 min drive</span>
+                        </div>
+                        <div class="location-item">
+                            <span>University of Alaska-Southeast</span>
+                            <span>10 min drive</span>
+                        </div>
+                        <div class="location-item">
+                            <span>Mendenhall Golf Course</span>
+                            <span>14 min drive</span>
+                        </div>
+                        <div class="location-item">
+                            <span>Juneau, AK (JNU-Juneau Intl.)</span>
+                            <span>14 min drive</span>
+                        </div>
+                    </div>
+                    <a href="#" class="review-link">See more about this area →</a>
+                </div>
+            </div>
+
+            <!-- Right Column - Booking Card -->
+            <div class="booking-card">
+                <div class="member-banner">
+                    <img src="/api/placeholder/24/24" alt="Member icon">
+                    <div>Members get our best prices when signed in!</div>
+                    <button class="btn">Sign in</button>
+                </div>
+
+                <div class="price-display">
+                    $134 <span class="per-night">per night</span>
+                </div>
+
+                <div class="date-picker">
+                    <input type="date" class="date-input" value="2024-11-18">
+                    <input type="date" class="date-input" value="2024-11-20">
+                </div>
+
+                <select class="travelers-select">
+                    <option>2 travelers</option>
+                </select>
+
+                <div class="total-section">
+                    <span>Total</span>
+                    <span>$543</span>
+                </div>
+
+                <button class="book-btn">Book now</button>
+                <div class="no-charge">You will not be charged yet</div>
+                
+                <a href="#" class="contact-
