@@ -741,7 +741,6 @@ flex-direction: column;
     padding: 20px; /* Adds padding inside the box */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
     border-radius: 10px; /* Rounded corners */
-    background-color: #e6f7ff; /* Background color */
     transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
 
@@ -779,11 +778,16 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* Main container */
 .property {
-    max-width: 800px;
-    color: #333;
-    line-height: 1.6;
-    margin: 90px 0px 70px 0px;
+    
+    max-width: 700px; /* Limits max width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
+
+   .property:hover{
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+   }
 
 /* Header */
 .property h1 {
@@ -935,7 +939,17 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* Amenities Section */
 .pd-amenities-wrapper {
+    width: 90%; /* Makes it responsive */
+    max-width: 700px; /* Limits max width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
     margin-bottom: 30px;
+    
+}
+
+.pd-amenities-grid:hover{
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .pd-amenities-grid {
@@ -1641,3 +1655,5 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
     border-radius: 8px;
     object-fit: cover;
 }
+
+
