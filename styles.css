@@ -16,6 +16,9 @@
     transition: background-color 0.3s; /* Smooth transition */
 }
 
+
+
+
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -155,6 +158,15 @@
         margin-left: 10px; /* Space between nav location and profile icon */
     }
 }
+
+
+
+
+
+/* 1*/
+
+
+
 
 
 
@@ -350,12 +362,14 @@
 
 /* Amenities */
 .amenities {
-    margin-bottom: 34px;
+    margin-bottom: 34px 0px 35px 0px;
 }
+
+
 
 .amenities-title {
     font-size: 20px;
-    margin-bottom: 16px;
+    margin: 50px 0px 10px 0px;
 }
 
 .amenities-grid {
@@ -380,12 +394,21 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Adjust values as needed */
     padding: 20px; /* Optional: add padding to make shadow more noticeable */
     border-radius: 10px; /* Optional: add rounded corners */
+   
+}
+
+.map-section:hover{
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
 }
 
 
 .map-container {
 flex: 1;
 }
+
+
+
+
 
 .location-list {
 flex: 1;
@@ -401,7 +424,8 @@ gap: 40px;
 }
 
 
-/* Booking Card */
+
+/* 2*/
 
 /* Enhanced Member Banner Styling */
 .member-banner {
@@ -465,7 +489,6 @@ gap: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 350px;
     margin: 20px auto;
-    text-align: center;
 }
 
 .booking-card:hover {
@@ -475,18 +498,59 @@ gap: 40px;
 
 /* Price Display Styling */
 .price-display {
-    font-size: 28px;
-    font-weight: bold;
-    color: #1cb557;
+    font-size: 26px;
+    font-weight: 600;
+    color: #222222;
     margin-bottom: 16px;
     display: flex;
-    justify-content: center;
-    gap: 5px;
+    align-items: baseline;
+    gap: 4px;
 }
 
 .per-night {
-    font-size: 16px;
-    color: #666;
+    font-size: 15px;
+    color: #222222;
+}
+
+/* Cancellation Policy */
+.cancellation-policy {
+    margin-bottom: 12px;
+}
+
+.policy-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.free-cancel {
+    color: #008a05;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.info-icon {
+    color: #717171;
+    cursor: pointer;
+}
+
+.cancel-deadline {
+    color: #222222;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* Availability Status */
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    color: #222222;
+}
+
+.check-icon {
+    color: #008a05;
 }
 
 /* Date Picker Styling */
@@ -496,19 +560,28 @@ gap: 40px;
     margin-bottom: 16px;
 }
 
+.date-input-wrapper label {
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 4px;
+    display: block;
+}
+
 .date-input {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 100%;
+    font-size: 14px;
     transition: border 0.3s ease;
 }
 
 .date-input:hover, .date-input:focus {
     border: 1px solid #1cb557;
+    outline: none;
 }
 
-/* Travelers Select Dropdown */
+/* Travelers Select Styling */
 .travelers-select {
     width: 100%;
     padding: 12px;
@@ -526,57 +599,67 @@ gap: 40px;
 
 /* Total Section Styling */
 .total-section {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
-.total-price {
-    font-weight: bold;
-    color: #1cb557;
+.total-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.total-header span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.price-details {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #717171;
+}
+
+.price-details-link {
+    color: #006aff;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Book Button Styling */
 .book-btn {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #0053D6, #003d9a);
+    background: #006aff;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
+    font-weight: 500;
     cursor: pointer;
-    font-weight: bold;
     transition: background 0.3s ease, transform 0.3s ease;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .book-btn:hover {
-    background: linear-gradient(135deg, #1cb557, #0e944d);
-    transform: scale(1.05);
+    background: #0055cc;
+    transform: scale(1.01);
 }
 
 /* No Charge Message */
 .no-charge {
-    color: #666;
+    text-align: center;
+    color: #717171;
     font-size: 14px;
-    margin-top: 10px;
 }
 
-/* Contact Host Link */
-.contact-host {
-    color: #0053D6;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 16px;
-    display: inline-block;
-    transition: color 0.3s ease;
-}
 
-.contact-host:hover {
-    color: #1cb557;
-}
+
+
+
 
 
 /* Responsive Member Banner and Booking Card */
@@ -655,6 +738,9 @@ gap: 40px;
         width: 100%;
     }
 }
+
+
+
 
 
 
@@ -796,6 +882,18 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
     color: #2c3e50;
 }
 
+
+@media (max-width: 600px) {
+    .property h1,
+    .property h2,
+    .property .property-section-title,
+    .property .location-section-title,
+    .property .rest-section-title,
+    .property .policy-section-title {
+        text-align: center;
+    }
+}
+
 /* Property Description */
 .property-description {
     margin-bottom: 30px;
@@ -880,6 +978,9 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
     margin: 0;
 }
 
+/* 3*/
+
+
 .policy-list li {
     margin-bottom: 10px;
     padding-left: 15px;
@@ -895,33 +996,61 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* Manager Section */
 .manager-section {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    background: #f9f9f9; /* Light background for better contrast */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .manager-section h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px;
     color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .manager-logo {
+    background-image: url('https://cdn-icons-png.flaticon.com/128/4757/4757312.png'); /* Replace with actual logo path */
+    background-size: cover;
     width: 60px;
     height: 60px;
-    background-color: #4CAF50;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
+    border: 2px solid #ddd;
 }
 
-/* Languages Section */
+.manager-section p {
+    color: #555;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
 .languages {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .languages p:first-child {
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.languages p:first-child::before {
+    content: '🌐'; /* Language icon */
+    font-size: 18px;
+}
+
+.languages p:last-child {
+    color: #777;
+    font-size: 15px;
+    margin-top: 5px;
 }
 
 
@@ -939,47 +1068,126 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* Amenities Section */
 .pd-amenities-wrapper {
-    width: 90%; /* Makes it responsive */
-    max-width: 700px; /* Limits max width */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-radius: 10px; /* Rounded corners */
-    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
-    margin-bottom: 30px;
-    
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.pd-amenities-grid:hover{
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+.pd-amenities-left {
+    flex: 1; /* Left section (Heading) */
+    min-width: 200px; /* Minimum width to avoid collapsing */
+}
+
+.pd-amenities-right {
+    flex: 2; /* Right section (Items + See All) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 200px; /* Ensures that right section doesn’t collapse */
+}
+
+.pd-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
 }
 
 .pd-amenities-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
 }
 
 .pd-amenity-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    min-width: 130px; /* Reducing width for more flexibility */
 }
 
 .pd-amenity-icon {
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
+    font-size: 1.5rem;
+    margin-right: 8px;
 }
 
 .pd-see-all {
-    color: #0066ff;
+    color: #007bff;
+    font-size: 0.875rem;
     text-decoration: none;
-    font-size: 14px;
-    margin-top: 10px;
-    display: inline-block;
+    margin-top: 15px;
+    align-self: flex-start;
 }
 
+.pd-see-all:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .pd-amenities-wrapper {
+        flex-direction: column; /* Stack left and right sections */
+        gap: 30px;
+    }
+
+    .pd-amenities-left {
+        flex: 0; /* Take the necessary space */
+        text-align: center;
+    }
+
+    .pd-amenities-right {
+        flex: 0;
+        width: 100%; /* Ensures the right section fills the available space */
+    }
+
+    .pd-amenities-grid {
+        grid-template-columns: 1fr; /* Stack amenities items in a single column */
+        gap: 10px;
+    }
+
+    .pd-amenity-item {
+        min-width: 100%; /* Ensures each item takes full width of its container */
+        justify-content: flex-start;
+        padding: 12px; /* Slightly reduced padding */
+    }
+
+    .pd-see-all {
+        margin-top: 20px; /* More space below the grid */
+    }
+}
+
+/* For very small screens like mobile devices */
+@media (max-width: 480px) {
+    .pd-amenities-grid {
+        gap: 8px; /* Reduce gap for even smaller screens */
+    }
+
+    .pd-amenity-item {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .pd-see-all {
+        font-size: 0.75rem; /* Smaller font size */
+    }
+}
+
+
+
+
+
+.pd-amenities-wrapper:hover{
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+} 
 /* Question Section */
 .pd-question-box {
     background-color: #f8fafc;
@@ -1032,84 +1240,366 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* House Rules Section */
 .pd-rules-container {
-    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pd-rules-left {
+    flex: 1; /* Left section (Heading) */
+    min-width: 200px; /* Minimum width to avoid collapsing */
+}
+
+.pd-rules-right {
+    flex: 2; /* Right section (Items) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 200px; /* Ensures that right section doesn’t collapse */
+}
+
+.pd-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
 }
 
 .pd-rules-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
 }
 
 .pd-rules-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 15px;
+    padding: 10px;
 }
 
 .pd-rule-item {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    min-width: 130px;
 }
 
 .pd-rule-icon {
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
-}
-
-.pd-rule-content {
-    display: flex;
-    flex-direction: column;
+    font-size: 1.5rem;
+    margin-right: 8px;
 }
 
 .pd-rule-title {
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-weight: bold;
 }
 
 .pd-rule-description {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.875rem;
+    color: #777;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .pd-rules-container {
+        flex-direction: column; /* Stack left and right sections */
+        gap: 30px;
+    }
+
+    .pd-rules-left {
+        flex: 0;
+        text-align: center;
+    }
+
+    .pd-rules-right {
+        flex: 0;
+        width: 100%;
+    }
+
+    .pd-rules-grid {
+        grid-template-columns: 1fr; /* Stack rules items in a single column */
+        gap: 10px;
+    }
+
+    .pd-rule-item {
+        min-width: 100%;
+        justify-content: flex-start;
+        padding: 12px; /* Slightly reduced padding */
+    }
+}
+
+/* For very small screens like mobile devices */
+@media (max-width: 480px) {
+    .pd-rules-grid {
+        gap: 8px;
+    }
+
+    .pd-rule-item {
+        padding: 10px;
+    }
+}
+
 
 /* Cancellation Section */
 .pd-cancellation-container {
     margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding : 25px;
+    border-radius: 10px;
 }
 
+/* Left side - Heading */
+.pd-cancellation-left {
+    flex: 1;
+    max-width: 200px; /* Adjust this value as needed */
+    justify-self: center;
+    align-self: center;
+}
+
+/* Right side - Content */
+.pd-cancellation-right {
+    flex: 3;
+    padding-left: 20px; /* Optional padding for spacing */
+}
+
+/* Timeline Styles */
 .pd-timeline {
-    background-color: #f8fafc;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 20px 0;
     margin: 20px 0;
 }
 
 .pd-timeline-bar {
-    height: 4px;
-    background-color: #ddd;
     position: relative;
-    margin: 20px 0;
+    height: 4px;
+    background-color: #e5e7eb;
+    border-radius: 2px;
+    margin: 40px 0;
 }
 
+/* Progress Track */
+.progress-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%; /* Adjust based on current progress */
+    background: linear-gradient(to right, #006aff, #00a3ff);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Timeline Points */
 .pd-timeline-point {
     position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border: 2px solid #0066ff;
-    border-radius: 50%;
-    top: -6px;
+    transform: translateX(-50%);
+    top: -8px;
 }
 
+/* Point Markers */
+.point-marker {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #006aff;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.point-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+/* Labels */
 .pd-timeline-label {
     position: absolute;
-    top: 20px;
+    top: 30px;
+    left: 50%;
     transform: translateX(-50%);
-    font-size: 14px;
-    color: #666;
+    text-align: center;
+    width: max-content;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
 }
 
+.label-main {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 2px;
+}
+
+.label-date {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Hover Effects */
+.pd-timeline-point:hover .point-marker {
+    transform: scale(1.1);
+    border-color: #0055cc;
+    box-shadow: 0 0 0 4px rgba(0, 106, 255, 0.1);
+}
+
+.pd-timeline-point:hover .pd-timeline-label {
+    opacity: 1;
+}
+
+/* Point-specific styles */
+/* Today Point */
+.pd-timeline-point:nth-child(2) .point-marker {
+    background-color: #006aff;
+    border-color: #006aff;
+}
+
+.pd-timeline-point:nth-child(2) .point-icon {
+    color: white;
+}
+
+/* Cancellation Point */
+.pd-timeline-point:nth-child(3) .point-marker {
+    border-color: #008a05;
+}
+
+.pd-timeline-point:nth-child(3):hover .point-marker {
+    border-color: #006804;
+}
+
+/* Check-in Point */
+.pd-timeline-point:nth-child(4) .point-marker {
+    border-color: #6b7280;
+}
+
+.pd-timeline-point:nth-child(4):hover .point-marker {
+    border-color: #4b5563;
+}
+
+@media (max-width: 768px) {
+    /* Make timeline vertical on small screens */
+    .pd-timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .pd-timeline-bar {
+        position: relative;
+        width: 4px;
+        height: 100%; /* Allow it to grow vertically */
+        margin: 0 auto;
+        background-color: #e5e7eb;
+        border-radius: 2px;
+    }
+
+    /* Rotate progress track to follow the vertical layout */
+    .progress-track {
+        width: 100%; /* Full width for the vertical track */
+        height: 50%; /* Adjust this based on progress */
+        transition: height 0.3s ease;
+    }
+
+    /* Align timeline points to the left of the bar */
+    .pd-timeline-point {
+        position: relative;
+        left: 10px; /* Offset to the right of the bar */
+        top: auto;
+        transform: translateX(0);
+        margin-bottom: 40px; /* Space between points */
+    }
+
+    /* Move labels to the right of points */
+    .pd-timeline-label {
+        position: relative;
+        top: 0;
+        left: 30px; /* Offset to the right of the marker */
+        transform: none;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Make timeline more compact and stacked for smaller screens */
+    .pd-timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items on small screens */
+        padding: 0;
+        margin: 10px 0; /* Reduced margin for small screens */
+    }
+
+    .pd-timeline-bar {
+        position: relative;
+        width: 3px; /* Narrower bar for mobile */
+        height: auto; /* Allow the bar to adjust based on content */
+        margin: 0 auto;
+        background-color: #e5e7eb;
+        border-radius: 2px;
+        max-height: 100%; /* Ensure it does not exceed container height */
+    }
+
+    /* Adjust the progress track height to be more fluid on mobile */
+    .progress-track {
+        width: 100%;
+        height: 40%; /* Reduce height for mobile */
+        transition: height 0.3s ease;
+    }
+
+    /* Align timeline points to the center */
+    .pd-timeline-point {
+        position: relative;
+        left: 0; /* Remove left offset for center alignment */
+        margin-bottom: 20px; /* Reduced space between points */
+        margin-left: auto;
+        margin-right: auto; /* Center the points */
+    }
+
+    /* Move labels under points and center them */
+    .pd-timeline-label {
+        position: relative;
+        top: 5px; /* Minor vertical shift for readability */
+        left: 0; /* No left offset for centering */
+        text-align: center; /* Center the labels */
+        font-size: 15px; /* Adjust font size for smaller screens */
+        max-width: 20px;
+        margin: 3px;
+    }
+
+    /* Adjust the size of the timeline points */
+    .pd-timeline-point::before {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+
+/* 4*/
+
+
+/* Refund Details */
 .pd-refund-detail {
     margin: 20px 0;
     padding: 20px;
@@ -1129,65 +1619,220 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 }
 
 
-
 .rental-container {
-    max-width: 800px;
+    max-width: 1200px;
     
 }
 
+/* Base styles (for larger screens) */
+/* Base styles (for larger screens) */
 .info-section {
-    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns the items at the top */
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the section */
+    gap: 50px;
+
+    
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure the container takes the full width */
+    
 }
 
 .section-heading {
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(34, 34, 34);
-    margin-bottom: 16px;
-}
-
-.info-content {
-    color: rgb(34, 34, 34);
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px; /* Space below the heading */
+    text-align: left; /* Ensures the heading is aligned to the left */
+    flex-basis: 30%; /* Allocating 30% space to the heading */
 }
 
 .info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Removes the default list bullets */
+    padding-left: 0; /* Removes left padding */
+    max-width: 70%;
+    text-align: left; /* Ensures the list items are aligned to the left */
 }
 
 .info-item {
-    margin-bottom: 12px;
-    font-size: 14px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd; /* Light separator line between items */
 }
 
+.info-item:last-child {
+    border-bottom: none; /* Removes the bottom border for the last item */
+}
+
+.info-item::before {
+    content: "✔"; /* Add checkmark before each item */
+    color: #4caf50; /* Green color for the checkmark */
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.info-item:hover {
+    background-color: #f0f0f0; /* Slight background change on hover */
+    cursor: pointer; /* Changes cursor to pointer for better interactivity */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-heading {
+        font-size: 1.25rem; /* Slightly smaller heading for mobile */
+        text-align: center; /* Center align heading */
+    }
+
+    .info-item {
+        font-size: 0.9rem; /* Reduce font size for smaller devices */
+    }
+
+    .info-list {
+        max-width: 100%; /* Full width for the list on smaller screens */
+        margin-top: 10px; /* Add some space above the list */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .info-item {
+        padding: 6px 0; /* Reduce padding for items on mobile */
+    }
+
+    .section-heading {
+        font-size: 1.1rem; /* Further reduce font size for very small screens */
+    }
+}
+
+
+/* Base styles for faq-section */
+/* Base styles for faq-section */
 .faq-section {
-    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between; /* Space between the two columns */
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the section */
+    margin-top: 20px; /* Space between sections */
+    
+}
+
+.faq-section .section-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px; /* Space below the heading */
+    text-align: left; /* Align the heading to the left for the larger screens */
+    max-width: 50%;
+    
 }
 
 .faq-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
+    font-size: 1rem;
+    max-width: 100%;;
+    color: #555;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd; /* Light separator line between items */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    
+
 }
 
-.faq-question {
-    flex-grow: 1;
-    font-size: 14px;
-    color: rgb(34, 34, 34);
+.faq-item:last-child {
+    border-bottom: none; /* Removes the bottom border for the last item */
+}
+
+.faq-item:hover {
+    background-color: #f0f0f0; /* Slight background change on hover */
+    cursor: pointer; /* Changes cursor to pointer for better interactivity */
 }
 
 .chevron {
-    margin-left: 8px;
-    color: #666;
+    font-size: 1.2rem;
+    color: #777;
+    transition: transform 0.3s ease;
 }
 
+/* Layout for two columns */
+.faq-header {
+    width: 30%; /* Occupy 40% of the width for the heading section */
+}
+
+.faq-items {
+    width: 75%; /* Occupy 55% of the width for the FAQ items */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .faq-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .faq-header,
+    .faq-items {
+        width: 100%; /* Full width for both header and items on smaller screens */
+    }
+
+    .faq-section .section-heading {
+        font-size: 1.25rem; /* Slightly smaller heading for mobile */
+        text-align: center; /* Center align heading */
+    }
+
+    .faq-item {
+        font-size: 0.9rem; /* Reduce font size for smaller devices */
+    }
+
+    .chevron {
+        font-size: 1rem; /* Adjust chevron size */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    .faq-item {
+        padding: 8px 0; /* Reduce padding for items on mobile */
+    }
+
+    .section-heading {
+        font-size: 1.1rem; /* Further reduce font size for very small screens */
+    }
+}
+
+
 .rating-section {
-    margin-bottom: 48px;
+    margin: 38px 0px 48px 0px;
 }
 
 .rating-header {
@@ -1324,7 +1969,8 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 
 /* Host Section Styling */
-.host-section {
+/* Host Section Styling */
+.host-section, .message-section {
     background: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -1333,7 +1979,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.host-section:hover {
+.host-section:hover, .message-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
 }
@@ -1344,12 +1990,11 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
     font-weight: bold;
     color: #2a2a2a;
     margin-bottom: 10px;
-    border-bottom: 2px solid #0053D6;
     padding-bottom: 8px;
 }
 
 /* Hosted By and Languages */
-.host-section div {
+.host-section div, .message-section {
     font-size: 16px;
     margin-bottom: 8px;
 }
@@ -1381,7 +2026,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .host-section {
+    .host-section, .message-section {
         padding: 16px;
         text-align: center;
     }
@@ -1391,7 +2036,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
         padding-bottom: 5px;
     }
 
-    .host-section div {
+    .host-section div, .message-section {
         font-size: 14px;
     }
 
@@ -1403,7 +2048,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
 }
 
 @media (max-width: 480px) {
-    .host-section {
+    .host-section, .message-section {
         padding: 12px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for small screens */
     }
@@ -1413,7 +2058,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
         padding-bottom: 4px;
     }
 
-    .host-section div {
+    .host-section div, .message-section {
         font-size: 12px; /* Smaller text for very small screens */
     }
 
@@ -1581,6 +2226,7 @@ margin: 20px auto;  /* Center alignment and vertical spacing */
         text-align: center;
     }
 }
+
 
 
 /* Responsive Features Section */
