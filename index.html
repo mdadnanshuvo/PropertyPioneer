@@ -195,29 +195,68 @@
                 
                 
                 <div class="booking-card">
+                    <!-- Price Display -->
                     <div class="price-display">
-                        <span class="currency">$134</span> <span class="per-night">per night</span>
+                        <span class="amount">$134</span>
+                        <span class="per-night">per night</span>
                     </div>
                 
+                    <!-- Cancellation Policy -->
+                    <div class="cancellation-policy">
+                        <div class="policy-header">
+                            <span class="free-cancel">Free cancellation</span>
+                            <span class="info-icon">ⓘ</span>
+                        </div>
+                        <div class="cancel-deadline">Before Mon, Nov 4</div>
+                    </div>
+                
+                    <!-- Availability Status -->
+                    <div class="availability-status">
+                        <span class="check-icon">✓</span>
+                        <span>Your dates are available</span>
+                    </div>
+                
+                    <!-- Date Selection -->
                     <div class="date-picker">
-                        <input type="date" class="date-input" value="2024-11-18">
-                        <input type="date" class="date-input" value="2024-11-20">
+                        <div class="date-input-wrapper">
+                            <label>Start date</label>
+                            <input type="date" class="date-input" />
+                        </div>
+                        <div class="date-input-wrapper">
+                            <label>End date</label>
+                            <input type="date" class="date-input" />
+                        </div>
                     </div>
                 
+                    <!-- Travelers Select -->
                     <select class="travelers-select">
-                        <option>2 travelers</option>
+                        <option value="1">1 Traveler</option>
+                        <option value="2">2 Travelers</option>
+                        <option value="3">3 Travelers</option>
+                        <option value="4">4 Travelers</option>
                     </select>
                 
+                    <!-- Total Section -->
                     <div class="total-section">
-                        <span>Total</span>
-                        <span class="total-price">$543</span>
+                        <div class="total-header">
+                            <span>Total</span>
+                            <span>$268</span>
+                        </div>
+                        <div class="price-details">
+                            <span>Includes taxes and fees</span>
+                            <a class="price-details-link" href="#">Details</a>
+                        </div>
                     </div>
                 
-                    <button class="book-btn">Book now</button>
-                    <div class="no-charge">You will not be charged yet</div>
+                    <!-- Book Button -->
+                    <button class="book-btn">Book Now</button>
                 
-                    <a href="#" class="contact-host">Contact Host</a>
+                    <!-- No Charge Message -->
+                    <div class="no-charge">You won’t be charged yet</div>
                 </div>
+                
+                
+
                 
 
             </div>
@@ -270,7 +309,7 @@
 
             <div class="property">
 
-                <h1>About this property</h1>
+       <h1>About this property</h1>
 
     <div class="property-description">
         <p>Juneau Vacation Home: Stunning View + Beach Access</p>
@@ -337,35 +376,40 @@
             <div class="pd-container">
                 <!-- Amenities Section -->
                 <div class="pd-amenities-wrapper">
-                    <h2 class="pd-section-title">Amenities</h2>
-                    <div class="pd-amenities-grid">
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">🍳</span>
-                            Kitchen
-                        </div>
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">🧺</span>
-                            Washer
-                        </div>
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">🌳</span>
-                            Outdoor Space
-                        </div>
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">🅿️</span>
-                            Parking available
-                        </div>
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">👕</span>
-                            Dryer
-                        </div>
-                        <div class="pd-amenity-item">
-                            <span class="pd-amenity-icon">🌊</span>
-                            Ocean view
-                        </div>
+                    <div class="pd-amenities-left">
+                        <h2 class="pd-section-title">Amenities</h2>
                     </div>
-                    <a href="#" class="pd-see-all">See all 34 amenities</a>
+                    <div class="pd-amenities-right">
+                        <div class="pd-amenities-grid">
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">🍳</span>
+                                Kitchen
+                            </div>
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">🧺</span>
+                                Washer
+                            </div>
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">🌳</span>
+                                Outdoor Space
+                            </div>
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">🅿️</span>
+                                Parking available
+                            </div>
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">👕</span>
+                                Dryer
+                            </div>
+                            <div class="pd-amenity-item">
+                                <span class="pd-amenity-icon">🌊</span>
+                                Ocean view
+                            </div>
+                        </div>
+                        <a href="#" class="pd-see-all">See all 34 amenities</a>
+                    </div>
                 </div>
+                
         
                 <!-- Question Section -->
                 <div class="pd-question-box">
@@ -382,106 +426,152 @@
         
                 <!-- House Rules Section -->
                 <div class="pd-rules-container">
-                    <h2 class="pd-section-title">House Rules</h2>
-                    <div class="pd-rules-header">
-                        <div>Check in after 3:00 PM</div>
-                        <div>Check out before 11:00 AM</div>
+                    <div class="pd-rules-left">
+                        <h2 class="pd-section-title">House Rules</h2>
                     </div>
-                    <div class="pd-rules-grid">
-                        <div class="pd-rule-item">
-                            <span class="pd-rule-icon">👶</span>
-                            <div class="pd-rule-content">
-                                <div class="pd-rule-title">Children</div>
-                                <div class="pd-rule-description">Children allowed: ages 0-17</div>
-                            </div>
+                    <div class="pd-rules-right">
+                        <div class="pd-rules-header">
+                            <div>Check in after 3:00 PM</div>
+                            <div>Check out before 11:00 AM</div>
                         </div>
-                        <div class="pd-rule-item">
-                            <span class="pd-rule-icon">🎉</span>
-                            <div class="pd-rule-content">
-                                <div class="pd-rule-title">Events</div>
-                                <div class="pd-rule-description">No events allowed</div>
+                        <div class="pd-rules-grid">
+                            <div class="pd-rule-item">
+                                <span class="pd-rule-icon">👶</span>
+                                <div class="pd-rule-content">
+                                    <div class="pd-rule-title">Children</div>
+                                    <div class="pd-rule-description">Children allowed: ages 0-17</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pd-rule-item">
-                            <span class="pd-rule-icon">🐕</span>
-                            <div class="pd-rule-content">
-                                <div class="pd-rule-title">Pets</div>
-                                <div class="pd-rule-description">No pets allowed</div>
+                            <div class="pd-rule-item">
+                                <span class="pd-rule-icon">🎉</span>
+                                <div class="pd-rule-content">
+                                    <div class="pd-rule-title">Events</div>
+                                    <div class="pd-rule-description">No events allowed</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="pd-rule-item">
-                            <span class="pd-rule-icon">🚭</span>
-                            <div class="pd-rule-content">
-                                <div class="pd-rule-title">Smoking</div>
-                                <div class="pd-rule-description">Smoking is not permitted</div>
+                            <div class="pd-rule-item">
+                                <span class="pd-rule-icon">🐕</span>
+                                <div class="pd-rule-content">
+                                    <div class="pd-rule-title">Pets</div>
+                                    <div class="pd-rule-description">No pets allowed</div>
+                                </div>
+                            </div>
+                            <div class="pd-rule-item">
+                                <span class="pd-rule-icon">🚭</span>
+                                <div class="pd-rule-content">
+                                    <div class="pd-rule-title">Smoking</div>
+                                    <div class="pd-rule-description">Smoking is not permitted</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
         
                 <!-- Cancellation Section -->
                 <div class="pd-cancellation-container">
-                    <h2 class="pd-section-title">Cancellation</h2>
-                    <div class="pd-timeline">
-                        <div class="pd-timeline-bar">
-                            <div class="pd-timeline-point" style="left: 0%">
-                                <div class="pd-timeline-label">Today</div>
-                            </div>
-                            <div class="pd-timeline-point" style="left: 50%">
-                                <div class="pd-timeline-label">Nov 4</div>
-                            </div>
-                            <div class="pd-timeline-point" style="left: 100%">
-                                <div class="pd-timeline-label">Check-in</div>
+                    <div class="pd-cancellation-left">
+                        <h2 class="pd-section-title">Cancellation</h2>
+                    </div>
+                    <div class="pd-cancellation-right">
+                        <div class="pd-timeline">
+                            <div class="pd-timeline-bar">
+                                <div class="progress-track"></div>
+                                <div class="pd-timeline-point" style="left: 0%">
+                                    <div class="point-marker">
+                                        <div class="point-icon">📅</div>
+                                    </div>
+                                    <div class="pd-timeline-label">
+                                        <span class="label-main">Today</span>
+                                        <span class="label-date">Oct 25</span>
+                                    </div>
+                                </div>
+                
+                                <div class="pd-timeline-point" style="left: 50%">
+                                    <div class="point-marker">
+                                        <div class="point-icon">ⓘ</div>
+                                    </div>
+                                    <div class="pd-timeline-label">
+                                        <span class="label-main">Free cancellation ends</span>
+                                        <span class="label-date">Nov 4</span>
+                                    </div>
+                                </div>
+                
+                                <div class="pd-timeline-point" style="left: 100%">
+                                    <div class="point-marker">
+                                        <div class="point-icon">🏠</div>
+                                    </div>
+                                    <div class="pd-timeline-label">
+                                        <span class="label-main">Check-in</span>
+                                        <span class="label-date">Nov 18</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="pd-refund-detail">
-                        <div class="pd-refund-title">Full refund</div>
-                        <div class="pd-refund-description">Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund. Times are based on the property's local time.</div>
-                    </div>
-                    <div class="pd-refund-detail">
-                        <div class="pd-refund-title">No refund</div>
-                        <div class="pd-refund-description">After that, you won't get a refund.</div>
+                
+                        <div class="pd-refund-detail">
+                            <div class="pd-refund-title">Full refund</div>
+                            <div class="pd-refund-description">Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund. Times are based on the property's local time.</div>
+                        </div>
+                
+                        <div class="pd-refund-detail">
+                            <div class="pd-refund-title">No refund</div>
+                            <div class="pd-refund-description">After that, you won't get a refund.</div>
+                        </div>
                     </div>
                 </div>
+                
+                
+                
             </div>
 
 
 
             <div class="rental-container">
                 <section class="info-section">
-                    <h2 class="section-heading">Important information</h2>
-                    <ul class="info-list">
-                        <li class="info-item">Extra-person charges may apply and vary depending on property policy</li>
-                        <li class="info-item">Government-issued photo identification and a credit card, debit card, or cash deposit may be required at check-in for incidental charges</li>
-                        <li class="info-item">Special requests are subject to availability upon check-in and may incur additional charges; special requests cannot be guaranteed</li>
-                        <li class="info-item">Onsite parties or group events are strictly prohibited</li>
-                        <li class="info-item">Host has indicated there is a carbon monoxide detector on the property</li>
-                        <li class="info-item">Host has indicated there is a smoke detector on the property</li>
-                        <li class="info-item">Safety features at this property include a fire extinguisher and a first aid kit</li>
-                    </ul>
+                    <div class="info-container">
+                        <h2 class="section-heading">Important information</h2>
+                        <ul class="info-list">
+                            <li class="info-item">Extra-person charges may apply and vary depending on property policy</li>
+                            <li class="info-item">Government-issued photo identification and a credit card, debit card, or cash deposit may be required at check-in for incidental charges</li>
+                            <li class="info-item">Special requests are subject to availability upon check-in and may incur additional charges; special requests cannot be guaranteed</li>
+                            <li class="info-item">Onsite parties or group events are strictly prohibited</li>
+                            <li class="info-item">Host has indicated there is a carbon monoxide detector on the property</li>
+                            <li class="info-item">Host has indicated there is a smoke detector on the property</li>
+                            <li class="info-item">Safety features at this property include a fire extinguisher and a first aid kit</li>
+                        </ul>
+                    </div>
                 </section>
+           
+                
         
                 <section class="faq-section">
-                    <h2 class="section-heading">Frequently asked questions</h2>
-                    <div class="faq-item">
-                        <span class="faq-question">Is Juneau Vacation Home: Stunning View + Beach Access pet-friendly?</span>
-                        <span class="chevron">›</span>
+                    <div class="faq-header">
+                        <h2 class="section-heading">Frequently asked questions</h2>
                     </div>
-                    <div class="faq-item">
-                        <span class="faq-question">What time is check-in at Juneau Vacation Home: Stunning View + Beach Access?</span>
-                        <span class="chevron">›</span>
-                    </div>
-                    <div class="faq-item">
-                        <span class="faq-question">What time is check-out at Juneau Vacation Home: Stunning View + Beach Access?</span>
-                        <span class="chevron">›</span>
-                    </div>
-                    <div class="faq-item">
-                        <span class="faq-question">Where is Juneau Vacation Home: Stunning View + Beach Access located?</span>
-                        <span class="chevron">›</span>
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <span class="faq-question">Is Juneau Vacation Home: Stunning View + Beach Access pet-friendly?</span>
+                            <span class="chevron">›</span>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">What time is check-in at Juneau Vacation Home: Stunning View + Beach Access?</span>
+                            <span class="chevron">›</span>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">What time is check-out at Juneau Vacation Home: Stunning View + Beach Access?</span>
+                            <span class="chevron">›</span>
+                        </div>
+                        <div class="faq-item">
+                            <span class="faq-question">Where is Juneau Vacation Home: Stunning View + Beach Access located?</span>
+                            <span class="chevron">›</span>
+                        </div>
                     </div>
                 </section>
-        
+                
+                
+                
+
                 <section class="rating-section">
                     <div class="rating-header">
                         <div>
@@ -496,25 +586,28 @@
                             </div>
                         </div>
                     </div>
-        
-                    <div class="reviews-container">
-                        <div class="review-card">
-                            <div class="review-rating">10/10 Excellent</div>
-                            <div class="review-text">A very cozy home for the two of us in a quiet area NW of town. Beautiful water view. We enjoyed the art, read up in it and visited the...</div>
-                            <div class="review-author">Kyle G.</div>
-                            <div class="review-date">Sep 25, 2024</div>
+                    
+                    <div class="right-column">
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-rating">10/10 Excellent</div>
+                                <div class="review-text">A very cozy home for the two of us in a quiet area NW of town...</div>
+                                <div class="review-author">Kyle G.</div>
+                                <div class="review-date">Sep 25, 2024</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-rating">10/10 Excellent</div>
+                                <div class="review-text">The cottage was just as the pictures and description stated...</div>
+                                <div class="review-author">Cindy B.</div>
+                                <div class="review-date">Sep 25, 2024</div>
+                            </div>
                         </div>
-                        <div class="review-card">
-                            <div class="review-rating">10/10 Excellent</div>
-                            <div class="review-text">The cottage was just as the pictures and description stated. Nice quiet area and great view of the cove.</div>
-                            <div class="review-author">Cindy B.</div>
-                            <div class="review-date">Sep 25, 2024</div>
-                        </div>
+                        <a href="#" class="see-all-reviews">See all 24 reviews</a>
                     </div>
-        
-                    <a href="#" class="see-all-reviews">See all 24 reviews</a>
                 </section>
-        
+                
+                
+                
                 <section class="host-section">
                     <h2 class="section-heading">About the host</h2>
                     <div>Hosted by Evolve</div>
@@ -523,11 +616,12 @@
                         <span class="language-list">English, French, German, Spanish</span>
                     </div>
                 </section>
-        
-                <div>
+                
+                <section class="message-section">
                     <h2 class="section-heading">Send a message</h2>
                     <a href="#" class="message-button">Contact host</a>
-                </div>
+                </section>
+                
             </div>
 
                 </div>
